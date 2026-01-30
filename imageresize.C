@@ -34,8 +34,8 @@ int main(int argc, char* argv[]) {
  printf("REDUCED WIDTH: %lf\n", rd_width);
  printf("REDUCED HEIGHT: %lf\n", rd_height);
 
- char cmdfinal[1024];
- snprintf(cmdfinal, 1024, "magick \"%s\" -resize \"%lf\"x\"%lf\"! \"%s\"", argv[1], rd_width, rd_height, argv[3]);
+ char cmdfinal[2048];
+ snprintf(cmdfinal, 2048, "magick \"%s\" -resize \"%lf\"x\"%lf\"! \"%s\"", argv[1], rd_width, rd_height, argv[3]);
  system(cmdfinal);
  printf("IMAGE RESIZE DONE SUCCESSFULLY!\n");
  	
