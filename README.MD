@@ -20,6 +20,10 @@ Output image name with absolute path.
    
    Example: `gcc imageresize.c -o imageresize` for Linux
 
+# NOTE
+The wrapper is quite basic and does the most basic resizing and preserves aspect ratio by default. That's all it does with no other functionalities implemented.
+
+
 # ENJOY!
 
 -------------------------------
