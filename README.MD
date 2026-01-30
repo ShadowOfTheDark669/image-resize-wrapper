@@ -1,24 +1,25 @@
+```
 ### image-resize-wrapper
-A small wrapper around `ImageMagick` , written in `C` which resizes image to a `n-th` percentage of their original size 
+A small wrapper around ImageMagick , written in C which resizes image to a n-th percentage of their original size 
+--------
 
 # USAGE:
-`imageresize <source_image_with_absolute_path> <reduction_factor> <output_image_with_absolute_path>`
-*********************
+imageresize <source_image_with_absolute_path> <reduction_factor> <output_image_with_absolute_path>
 
-`<source_image_with_absolute_path>` : 
+<source_image_with_absolute_path> : 
 Absolute path of the source image to be resized.
 
-`<reduction_factor>` : 
-`n` where `n` can be a whole or decimal number. The resulting image is `n`th percent of the source image.
+<reduction_factor> : 
+n where n can be a whole or decimal number. The resulting image is nth percent of the source image.
 
-`<output_image_with_absolute_path>` : 
+<output_image_with_absolute_path> : 
 Output image name with absolute path.
 
 # COMPILING THE BINARY:
-1. Download the `source code`
+1. Download the source code
 2. Compile with preferred options for Windows/Linux/etc.  
    
-   Example: `gcc imageresize.c -o imageresize` for Linux
+   Example: gcc imageresize.c -o imageresize for Linux
 
 # NOTE
 The wrapper is quite basic and does the most basic resizing and preserves aspect ratio by default. That's all it does with no other functionalities implemented.
@@ -27,3 +28,4 @@ The wrapper is quite basic and does the most basic resizing and preserves aspect
 # ENJOY!
 
 -------------------------------
+```
