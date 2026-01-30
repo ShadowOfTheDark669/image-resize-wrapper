@@ -16,8 +16,8 @@ Output image name with absolute path.
 
 # COMPILING THE BINARY:
 1. Download the `source code`
-2. Compile with preferred options for Windows/Linux/etc. Example:
-`gcc imageresize.c -o imageresize` for Linux
+2. Compile with preferred options for Windows/Linux/etc. \ 
+   Example: `gcc imageresize.c -o imageresize` for Linux
 
 # ENJOY!
 
