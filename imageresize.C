@@ -2,26 +2,20 @@
 #include <string.h>
 #include <stdlib.h>
 
+
 int main(int argc, char* argv[]) {
 
- char cmdw[2048];
- snprintf(cmdw, 2048, "identify -format %\"w\" \"%s\"", argv[1]);
-
- char cmdh[2048];
- snprintf(cmdh, 2048, "identify -format %\"h\" \"%s\"", argv[1]);
-
- FILE *cmd_w;
- cmd_w = popen(cmdw, "r\0");
- char widthstr[100];
- fgets(widthstr, 100, cmd_w);
- double width = atof(widthstr);
-
- FILE *cmd_h;
- cmd_h = popen(cmdh, "r\0");
- char heightstr[100];
- fgets(heightstr, 100, cmd_h);
- double height = atof(heightstr);
-
+ char cmd[2048];
+ char imgmgkparam[] = "\"%w\\n%h\\n\"";
+ snprintf(cmd, 2048, "identify -format %s \"%s\"",imgmgkparam, argv[1]);
+ 
+ FILE *cmd_f;
+ cmd_f = popen(cmd, "r");
+ char widthstr[100], heightstr[100];
+ fgets(widthstr, 100, cmd_f);
+ fgets(heightstr, 100, cmd_f);
+ double width = atof(widthstr), height = atof(heightstr);
+ 
  printf("ORIG WIDTH: %lf\n", width);
  printf("ORIG HEIGHT:%lf\n", height);
 
